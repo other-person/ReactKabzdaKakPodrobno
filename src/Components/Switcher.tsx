@@ -2,35 +2,38 @@ import React, {useState} from 'react';
 import s from "./Switcher.module.css"
 
 type SwitcherPropsType = {
-    state: boolean
+
 }
 
 export const Switcher = (props: SwitcherPropsType) => {
 
+    let [on, setOn] = useState(false)
 
-const on = {
-    backgroundColor: props.state ? "green" : "white"
-};
-const off = {
-    backgroundColor: props.state ? "white" : "red"
-};
-const indicator = {
-    backgroundColor: props.state ? "green" : "red"
-};
-
-let[status, setStatus]=useState(true)
+    const onStyle = {
+        backgroundColor: on ? "green" : "white"
+    };
+    const offStyle = {
+        backgroundColor: on ? "white" : "red"
+    };
+    const indicator = {
+        backgroundColor: on ? "green" : "red"
+    };
 
     return (
         <div className={s.wrapper}>
-            <div  style = {on} className={s.windowLeft} onClick={()=>{setStatus(true)}}>
+            <div style={onStyle} className={s.windowLeft} onClick={(event) => {
+                setOn(true)
+            }}>
                 ON
             </div>
-            <div  style = {off} className={s.windowRight} onClick={()=>{setStatus(false)}}>
+            <div style={offStyle} className={s.windowRight} onClick={(event) => {
+                setOn(false)
+            }}>
                 OFF
             </div>
-            <div style = {indicator} className={s.light}>
+            <div style={indicator} className={s.light}>
 
-            </div >
+            </div>
         </div>
     );
 };
