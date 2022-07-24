@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import s from "../Switcher/Switcher.module.css"
+import {action} from "@storybook/addon-actions";
 
 type SwitcherPropsType = {
 
@@ -32,19 +33,17 @@ export const UncontrolledSwitcher = (props: SwitcherPropsType) => {
         backgroundColor: on ? "green" : "red"
     };
 
+    const callback = action ("ON or OFF changing");
+
     return (
-        <div className={s.wrapper}>
-            <div style={onStyle} className={s.windowLeft} onClick={(event) => {
-                setOn(true)
-            }}>
+        <div >
+            <div style={onStyle}  onClick={(event) => {setOn(true)}} onChange={callback}>
                 ON
             </div>
-            <div style={offStyle} className={s.windowRight} onClick={(event) => {
-                setOn(false)
-            }}>
+            <div style={offStyle}  onClick={(event) => {setOn(false)}} onChange={callback}>
                 OFF
             </div>
-            <div style={indicator} className={s.light}>
+            <div style={indicator} >
 
             </div>
         </div>

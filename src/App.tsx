@@ -7,38 +7,36 @@ import {Switcher} from "./Components/Switcher/Switcher";
 import {Rating, RatingValueType} from "./Components/Rating/Rating";
 
 
-
 function App() {
 
-    let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
-    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
-    let [on, setOn] = useState(true)
-    return (
+    // let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
+    // let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+    // let [on, setOn] = useState(true)
+     return (
 
-        <div>
-
-
-            {<Accordion titleValue ={"Menu"}
-                          collapsed={accordionCollapsed}
-                          setCollapsed={setAccordionCollapsed}/>}
+    <div>
 
 
-
-            {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
-
-            {/*<Rating value = {0}/>*/}
-            {/*<Rating value = {1}/>*/}
-            {/*<Rating value = {2}/>*/}
-            {/*<Rating value = {3}/>*/}
-            {/*<Rating value = {4}/>*/}
-            {/*<Rating value = {5}/>*/}
+        {/*{<Accordion titleValue={"Menu"}*/}
+        {/*            collapsed={accordionCollapsed}*/}
+        {/*            setCollapsed={setAccordionCollapsed}/>}*/}
 
 
-            <Switcher on={on} onChange={setOn}/>
+        {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
 
-        </div>
+        {/*<Rating value = {0}/>*/}
+        {/*<Rating value = {1}/>*/}
+        {/*<Rating value = {2}/>*/}
+        {/*<Rating value = {3}/>*/}
+        {/*<Rating value = {4}/>*/}
+        {/*<Rating value = {5}/>*/}
 
-    );
+
+        {/*<Switcher on={on} onChange={setOn}/>*/}
+
+    </div>
+
+     );
 }
 
 export default App;
