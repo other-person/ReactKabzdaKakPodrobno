@@ -2,7 +2,7 @@ import './App.css';
 import React, {useState} from 'react';
 import {UncontrolledSwitcher} from "./Components/UncontrolledSwither/UncontrolledSwitcher";
 import {UncontrolledRating} from "./Components/UncontrolledRating/UncontrolledRating";
-import {Accordion} from "./Components/Accordion/Accordion";
+
 import {Switcher} from "./Components/Switcher/Switcher";
 import {Rating, RatingValueType} from "./Components/Rating/Rating";
 
@@ -17,7 +17,7 @@ function App() {
     <div>
 
 
-        {/*{<Accordion titleValue={"Menu"}*/}
+        {/*{<SimpleAccordion titleValue={"Menu"}*/}
         {/*            collapsed={accordionCollapsed}*/}
         {/*            setCollapsed={setAccordionCollapsed}/>}*/}
 
